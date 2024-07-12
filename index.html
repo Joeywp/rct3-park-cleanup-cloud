@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Park CleanUp online</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/metro-bootstrap.css">
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+          rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <!-- http://code.jquery.com/jquery-2.0.2.min.js -->
+    <script   src="https://code.jquery.com/jquery-3.1.0.slim.min.js"   integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="   crossorigin="anonymous"></script>
+    <script src="r3archive/archive.js" async></script>
+    <script src="jdataview.js" async></script>
+    <script src="pcu.js" async></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-alert.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-button.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-carousel.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-typeahead.js"></script>
+
+    <script type="text/javascript" src="depend/filesaver.js"></script>
+    <script type="text/javascript" src="depend/bb.js"></script>
+</head>
+<body style="background-color: #f5f5f5;">
+<div id="alert">
+</div>
+<div class="navbar navbar-fixed-top" style="margin-bottom:0px;">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#">Park CleanUp Online Beta</a>
+
+            <div style="margin-top:10px;">
+                <span id="droptext">&nbsp;</span><span id="sizeindicator"></span>
+            </div>
+            <div id="buttons" style="margin-top:5px;">
+                <input id="btn_file" class="guienable_btn " type="file" hidden="true">
+                <input type="button" id="btn_load" class="guienable_btn btn btn-primary" value="Load"/>
+                <button id="btn_save_file" class="guienable_btn btn btn-primary">Save</button>
+                <div class="btn-group">
+                    <button id="btn_unused_items" class="guienable_btn btn btn-primary">CleanUp the parkfile</button>
+                    <button class="guienable_btn btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" id="cleanup_guests">CleanUp guests</a></li>
+                        <li><a href="#" id="cleanup_ducks">CleanUp ducks</a></li>
+                    </ul>
+                </div>
+                <button class="guienable_btn btn" id="btn_deselect">Deselect items</button>
+                <button class="guienable_btn btn" id="btn_parkmap_show">Show parkmap</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fixed_progress">
+    <div id="status">No park loaded</div>
+    <div class="progress progress-striped active" style="margin-bottom:0px;">
+        <div id="procesprogress" class="bar" style="width: 0%;"></div>
+    </div>
+</div>
+
+<!--<canvas id="parkmap"></canvas>-->
+<div id="devlist"></div>
+<div class="well">
+    <div id="itemlist"></div>
+</div>
+<div id="dropzone">
+</div>
+<div id="parkmap_holder">
+    <button class="guienable_btn btn" id="btn_parkmap_hide">Hide parkmap</button>
+    <canvas id="parkmap"></canvas>
+</div>
+</body>
+</html>

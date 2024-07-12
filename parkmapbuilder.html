@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Park CleanUp online</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="r3archive/archive.js" async></script>
+<script src="pcu.js" async></script>
+</head>
+
+<body>
+<div id="dropzone"><input id="btn_file" class="guienable_btn" type="file"><input type="button" id="btn_load" class="guienable_btn" value="Load"/><br/><span id="droptext">Drop your parkfile.dat here</span></div>
+<div id="statusbar">
+    <progress id="procesprogress" class="pbar" value="0" max="100"></progress>
+    <div id="status">No park loaded</div>
+</div>
+<div id="buttons"><input type="button" id="btn_unused_items" class="guienable_btn" value="Select unused items"/><input type="button" class="guienable_btn" id="btn_deselect" value="Deselect items"/></div>
+<div id="sizeindicator"></div>
+<div id="itemlist"></div>
+</body>
+</html>

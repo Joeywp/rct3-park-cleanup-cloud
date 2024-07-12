@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+body {
+    padding-top: 100px;
+    font-size: 13px;
+    line-height: 15px;
+    font-family: "Lucida Grande", Verdana, Geneva, sans-serif;
+    color: #22254c;
+    background-color: #f5f5f5;
+}
+
+#parkmap_holder {
+    background-color: white;
+    display: none;
+    position: absolute;
+    float: left;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+#parkmap_holder .btn {
+    display: block;
+}
+
+#dropzone {
+    width: 500px;
+    height: 50px;
+}
+
+::selection {
+    background: #2e8bcc;
+}
+
+::-moz-selection {
+    background: #2e8bcc;
+}
+
+#itemlist {
+    overflow: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#status {
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+}
+
+.itemcheckbox, .itemlabel {
+    display: inline;
+    width: 100%;
+}
+
+.fileupload {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    background: . . .; /* and other things to make it pretty */
+}
+
+.fileupload input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* not left, because only the right part of the input seems to
+                    be clickable in some browser I can't remember */
+    cursor: pointer;
+    opacity: 0.0;
+    filter: alpha(opacity=0);
+    /* and all the other old opacity stuff you
+                                    want to support */
+    font-size: 300px;
+    /* wtf, but apparently the most reliable way to make
+                            a large part of the input clickable in most browsers */
+    height: 200px;
+}
+
+#fixed_progress {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
